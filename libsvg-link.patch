@@ -1,0 +1,14 @@
+--- libsvg-0.1.0/configure.in.orig	2003-07-10 17:21:18.000000000 +0200
++++ libsvg-0.1.0/configure.in	2003-11-24 22:29:32.307600392 +0100
+@@ -46,6 +46,11 @@
+ dnl ===========================================================================
+ 
+ PKG_CHECK_MODULES(LIBSVG, libxml-2.0 >= $LIBXML_REQUIRED )
++AC_CHECK_LIB(jpeg, jpeg_start_decompress, [LIBSVG_LIBS="$LIBSVG_LIBS -ljpeg"],
++	[AC_MSG_ERROR([libjpeg is required])])
++AC_CHECK_LIB(png, png_create_read_struct, [LIBSVG_LIBS="$LIBSVG_LIBS -lpng"],
++	[AC_MSG_ERROR([libpng is required])])
++
+ AC_SUBST(LIBSVG_CFLAGS)
+ AC_SUBST(LIBSVG_LIBS)
+ 
