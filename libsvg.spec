@@ -7,7 +7,13 @@ License:	LGPL
 Group:		Libraries
 Source0:	http://cairographics.org/snapshots/%{name}-%{version}.tar.gz
 # Source0-md5:	9d7b4bd6f475acc0ad277175b4a88aa4
+Patch0:		%{name}-link.patch
 URL:		http://www.xsvg.org/
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libjpeg-devel
+BuildRequires:	libpng-devel
+BuildRequires:	libtool
 BuildRequires:	libxml2-devel >= 2.4.7
 BuildRequires:	pkgconfig
 Requires:	libxml2 >= 2.4.7
@@ -28,6 +34,8 @@ Summary:	Header files for libsvg library
 Summary(pl):	Pliki nag³ówkowe biblioteki libsvg
 Group:		Development/Libraries
 Requires:	%{name} = %{version}
+Requires:	libjpeg-devel
+Requires:	libpng-devel
 Requires:	libxml2-devel >= 2.4.7
 
 %description devel
@@ -50,8 +58,14 @@ Statyczna biblioteka libsvg.
 
 %prep
 %setup -q
+%patch0 -p1
 
 %build
+%{__libtoolize}
+%{__aclocal}
+%{__autoconf}
+%{__autoheader}
+%{__automake}
 %configure
 %{__make}
 
