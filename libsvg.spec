@@ -33,7 +33,7 @@ interfejs, który mo¿na wykorzystaæ w ró¿nych silnikach renderuj±cych.
 Summary:	Header files for libsvg library
 Summary(pl):	Pliki nag³ówkowe biblioteki libsvg
 Group:		Development/Libraries
-Requires:	%{name} = %{version}
+Requires:	%{name} = %{version}-%{release}
 Requires:	libjpeg-devel
 Requires:	libpng-devel
 Requires:	libxml2-devel >= 2.4.7
@@ -48,7 +48,7 @@ Pliki nag³ówkowe biblioteki libsvg.
 Summary:	Static libsvg library
 Summary(pl):	Statyczna biblioteka libsvg
 Group:		Development/Libraries
-Requires:	%{name}-devel = %{version}
+Requires:	%{name}-devel = %{version}-%{release}
 
 %description static
 Static libsvg library.
