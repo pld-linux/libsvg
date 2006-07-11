@@ -7,7 +7,7 @@
 +
 +AC_CHECK_LIB(jpeg, jpeg_start_decompress, [LIBSVG_LIBS="$LIBSVG_LIBS -ljpeg"],
 +	[AC_MSG_ERROR([libjpeg is required])])
-+AC_CHECK_LIB(png, png_create_read_struct, [LIBSVG_LIBS="$LIBSVG_LIBS -lpng"],
++AC_CHECK_LIB(png12, png_create_read_struct, [LIBSVG_LIBS="$LIBSVG_LIBS -lpng12"],
 +	[AC_MSG_ERROR([libpng is required])])
 +
  AC_SUBST(LIBSVG_CFLAGS)
