@@ -2,7 +2,7 @@ Summary:	A generic SVG library
 Summary(pl):	Ogólna biblioteka SVG
 Name:		libsvg
 Version:	0.1.4
-Release:	2
+Release:	3
 License:	LGPL
 Group:		Libraries
 Source0:	http://cairographics.org/snapshots/%{name}-%{version}.tar.gz
@@ -12,11 +12,11 @@ URL:		http://www.xsvg.org/
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	libjpeg-devel
-BuildRequires:	libpng-devel
+BuildRequires:	libpng-devel >= 1.2.4
 BuildRequires:	libtool
-BuildRequires:	libxml2-devel >= 2.4.7
+BuildRequires:	libxml2-devel >= 1:2.6.26
 BuildRequires:	pkgconfig
-Requires:	libxml2 >= 2.4.7
+Requires:	libxml2 >= 1:2.6.26
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -36,7 +36,7 @@ Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	libjpeg-devel
 Requires:	libpng-devel
-Requires:	libxml2-devel >= 2.4.7
+Requires:	libxml2-devel >= 1:2.6.26
 
 %description devel
 Header files for libsvg library.
@@ -66,6 +66,7 @@ Statyczna biblioteka libsvg.
 %{__autoconf}
 %{__autoheader}
 %{__automake}
+LDFLAGS="%{rpmldflags} -Wl,--as-needed"
 %configure
 %{__make}
 
