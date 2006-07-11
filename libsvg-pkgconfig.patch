@@ -1,0 +1,10 @@
+diff -aurN libsvg-0.1.4.orig/libsvg.pc.in libsvg-0.1.4/libsvg.pc.in
+--- libsvg-0.1.4.orig/libsvg.pc.in	2005-02-17 04:13:18.000000000 +0100
++++ libsvg-0.1.4/libsvg.pc.in	2006-07-11 22:39:57.244665661 +0200
+@@ -7,5 +7,5 @@
+ Description: library for parsing SVG content
+ Version: @VERSION@
+ Requires: @LIBSVG_REQUIRES@
+-Libs: -L${libdir} -lsvg -lpng -ljpeg -lz
++Libs: -L${libdir} -lsvg @LIBSVG_LIBS@
+ Cflags: -I${includedir}
