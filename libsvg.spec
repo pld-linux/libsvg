@@ -1,5 +1,5 @@
 Summary:	A generic SVG library
-Summary(pl):	OgÛlna biblioteka SVG
+Summary(pl.UTF-8):   Og√≥lna biblioteka SVG
 Name:		libsvg
 Version:	0.1.4
 Release:	4
@@ -25,14 +25,14 @@ libsvg provides a parser for SVG content in files or buffers. It
 doesn't do any rendering, but instead provides a function-based
 interface that can be used by various rendering engines.
 
-%description -l pl
-libsvg udostÍpnia parser dla danych SVG z plikÛw lub buforÛw. Nie
-wykonuje øadnego renderingu, dostarcza jedynie oparty na funkcjach
-interfejs, ktÛry moøna wykorzystaÊ w rÛønych silnikach renderuj±cych.
+%description -l pl.UTF-8
+libsvg udostƒôpnia parser dla danych SVG z plik√≥w lub bufor√≥w. Nie
+wykonuje ≈ºadnego renderingu, dostarcza jedynie oparty na funkcjach
+interfejs, kt√≥ry mo≈ºna wykorzystaƒá w r√≥≈ºnych silnikach renderujƒÖcych.
 
 %package devel
 Summary:	Header files for libsvg library
-Summary(pl):	Pliki nag≥Ûwkowe biblioteki libsvg
+Summary(pl.UTF-8):   Pliki nag≈Ç√≥wkowe biblioteki libsvg
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	libjpeg-devel
@@ -42,19 +42,19 @@ Requires:	libxml2-devel >= 1:2.6.26
 %description devel
 Header files for libsvg library.
 
-%description devel -l pl
-Pliki nag≥Ûwkowe biblioteki libsvg.
+%description devel -l pl.UTF-8
+Pliki nag≈Ç√≥wkowe biblioteki libsvg.
 
 %package static
 Summary:	Static libsvg library
-Summary(pl):	Statyczna biblioteka libsvg
+Summary(pl.UTF-8):   Statyczna biblioteka libsvg
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 
 %description static
 Static libsvg library.
 
-%description static -l pl
+%description static -l pl.UTF-8
 Statyczna biblioteka libsvg.
 
 %prep
