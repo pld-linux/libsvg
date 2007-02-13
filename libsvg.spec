@@ -1,5 +1,5 @@
 Summary:	A generic SVG library
-Summary(pl.UTF-8):   Ogólna biblioteka SVG
+Summary(pl.UTF-8):	Ogólna biblioteka SVG
 Name:		libsvg
 Version:	0.1.4
 Release:	4
@@ -32,7 +32,7 @@ interfejs, który można wykorzystać w różnych silnikach renderujących.
 
 %package devel
 Summary:	Header files for libsvg library
-Summary(pl.UTF-8):   Pliki nagłówkowe biblioteki libsvg
+Summary(pl.UTF-8):	Pliki nagłówkowe biblioteki libsvg
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	libjpeg-devel
@@ -47,7 +47,7 @@ Pliki nagłówkowe biblioteki libsvg.
 
 %package static
 Summary:	Static libsvg library
-Summary(pl.UTF-8):   Statyczna biblioteka libsvg
+Summary(pl.UTF-8):	Statyczna biblioteka libsvg
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 
