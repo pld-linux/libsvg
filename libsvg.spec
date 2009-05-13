@@ -2,13 +2,14 @@ Summary:	A generic SVG library
 Summary(pl.UTF-8):	Ogólna biblioteka SVG
 Name:		libsvg
 Version:	0.1.4
-Release:	6
+Release:	7
 License:	LGPL
 Group:		Libraries
 Source0:	http://cairographics.org/snapshots/%{name}-%{version}.tar.gz
 # Source0-md5:	ce0715e3013f78506795fba16e8455d3
 Patch0:		%{name}-link.patch
 Patch1:		%{name}-pkgconfig.patch
+Patch2:		%{name}-lt.patch
 URL:		http://www.xsvg.org/
 BuildRequires:	autoconf
 BuildRequires:	automake
@@ -61,6 +62,7 @@ Statyczna biblioteka libsvg.
 %setup -q
 %patch0 -p1
 %patch1 -p1
+%patch2 -p1
 
 %build
 %{__libtoolize}
