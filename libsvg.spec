@@ -2,7 +2,7 @@ Summary:	A generic SVG library
 Summary(pl.UTF-8):	Ogólna biblioteka SVG
 Name:		libsvg
 Version:	0.1.4
-Release:	9
+Release:	10
 License:	LGPL
 Group:		Libraries
 Source0:	http://cairographics.org/snapshots/%{name}-%{version}.tar.gz
