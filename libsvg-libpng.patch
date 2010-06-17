@@ -1,0 +1,26 @@
+--- libsvg-0.1.4/src/svg_image.c~	2005-04-11 17:45:32.000000000 +0200
++++ libsvg-0.1.4/src/svg_image.c	2010-06-17 13:12:18.297825856 +0200
+@@ -228,7 +228,11 @@
+ 	return SVG_STATUS_FILE_NOT_FOUND;
+ 
+     sig_bytes = fread (png_sig, 1, PNG_SIG_SIZE, file);
++#if PNG_LIBPNG_VER < 10400
+     if (png_check_sig (png_sig, sig_bytes) == 0) {
++#else
++    if (png_sig_cmp (png_sig, 0, sig_bytes) == 0) {
++#endif
+ 	fclose (file);
+ 	return SVGINT_STATUS_IMAGE_NOT_PNG;
+     }
+@@ -271,7 +275,11 @@
+ 
+     /* expand gray bit depth if needed */
+     if (color_type == PNG_COLOR_TYPE_GRAY && depth < 8)
++#if PNG_LIBPNG_VER < 10400
+ 	png_set_gray_1_2_4_to_8 (png);
++#else
++    	png_set_expand_gray_1_2_4_to_8 (png);
++#endif
+ 
+     /* transform transparency to alpha */
+     if (png_get_valid(png, info, PNG_INFO_tRNS))
