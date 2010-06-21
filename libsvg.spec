@@ -11,7 +11,7 @@ Patch0:		%{name}-link.patch
 Patch1:		%{name}-pkgconfig.patch
 Patch2:		%{name}-lt.patch
 Patch3:		%{name}-libpng.patch
-URL:		http://www.xsvg.org/
+URL:		http://www.t2-project.org/packages/libsvg.html
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	libjpeg-devel
