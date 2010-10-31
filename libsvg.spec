@@ -3,7 +3,7 @@ Summary(pl.UTF-8):	Ogólna biblioteka SVG
 Name:		libsvg
 Version:	0.1.4
 Release:	11
-License:	LGPL
+License:	LGPL v2+
 Group:		Libraries
 Source0:	http://cairographics.org/snapshots/%{name}-%{version}.tar.gz
 # Source0-md5:	ce0715e3013f78506795fba16e8455d3
@@ -11,7 +11,7 @@ Patch0:		%{name}-link.patch
 Patch1:		%{name}-pkgconfig.patch
 Patch2:		%{name}-lt.patch
 Patch3:		%{name}-libpng.patch
-URL:		http://www.t2-project.org/packages/libsvg.html
+URL:		http://cairographics.org/
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	libjpeg-devel
@@ -91,16 +91,16 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc AUTHORS ChangeLog NEWS README TODO
-%attr(755,root,root) %{_libdir}/lib*.so.*.*.*
+%attr(755,root,root) %{_libdir}/libsvg.so.*.*.*
 %attr(755,root,root) %ghost %{_libdir}/libsvg.so.1
 
 %files devel
 %defattr(644,root,root,755)
-%attr(755,root,root) %{_libdir}/lib*.so
-%{_libdir}/lib*.la
-%{_includedir}/*.h
-%{_pkgconfigdir}/*.pc
+%attr(755,root,root) %{_libdir}/libsvg.so
+%{_libdir}/libsvg.la
+%{_includedir}/svg.h
+%{_pkgconfigdir}/libsvg.pc
 
 %files static
 %defattr(644,root,root,755)
-%{_libdir}/lib*.a
+%{_libdir}/libsvg.a
