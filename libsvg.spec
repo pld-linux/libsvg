@@ -72,8 +72,8 @@ Statyczna biblioteka libsvg.
 %{__autoconf}
 %{__autoheader}
 %{__automake}
-LDFLAGS="%{rpmldflags} -Wl,--as-needed"
-%configure
+%configure \
+	LIBS="-lm -lz"
 %{__make}
 
 %install
