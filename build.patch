@@ -1,0 +1,143 @@
+diff -ur libsvg-0.1.4.org/src/svg.c libsvg-0.1.4/src/svg.c
+--- libsvg-0.1.4.org/src/svg.c	2005-04-11 17:43:10.000000000 +0200
++++ libsvg-0.1.4/src/svg.c	2025-07-15 16:14:22.611889077 +0200
+@@ -24,6 +24,7 @@
+ #include <fcntl.h>
+ #include <string.h>
+ #include <unistd.h>
++#include <stdlib.h>
+ #include <libgen.h>
+ #include <zlib.h>
+ #include <sys/param.h>
+diff -ur libsvg-0.1.4.org/src/svg_color.c libsvg-0.1.4/src/svg_color.c
+--- libsvg-0.1.4.org/src/svg_color.c	2004-06-04 18:21:01.000000000 +0200
++++ libsvg-0.1.4/src/svg_color.c	2025-07-15 16:15:12.461765297 +0200
+@@ -22,6 +22,7 @@
+ 
+ #include <string.h>
+ #include <math.h>
++#include <stdlib.h>
+ 
+ #include "svgint.h"
+ 
+diff -ur libsvg-0.1.4.org/src/svg_element.c libsvg-0.1.4/src/svg_element.c
+--- libsvg-0.1.4.org/src/svg_element.c	2005-04-21 20:51:42.000000000 +0200
++++ libsvg-0.1.4/src/svg_element.c	2025-07-15 16:15:36.466385452 +0200
+@@ -21,6 +21,7 @@
+ */
+ 
+ #include <string.h>
++#include <stdlib.h>
+ 
+ #include "svgint.h"
+ 
+diff -ur libsvg-0.1.4.org/src/svg_gradient.c libsvg-0.1.4/src/svg_gradient.c
+--- libsvg-0.1.4.org/src/svg_gradient.c	2005-04-11 17:45:06.000000000 +0200
++++ libsvg-0.1.4/src/svg_gradient.c	2025-07-15 16:15:53.596851030 +0200
+ #include "svgint.h"
+ 
+ #include <string.h>
++#include <stdlib.h>
+ 
+ svg_status_t
+ _svg_gradient_init (svg_gradient_t *gradient)
+diff -ur libsvg-0.1.4.org/src/svg_group.c libsvg-0.1.4/src/svg_group.c
+--- libsvg-0.1.4.org/src/svg_group.c	2005-04-11 17:43:30.000000000 +0200
++++ libsvg-0.1.4/src/svg_group.c	2025-07-15 16:16:32.401152374 +0200
+@@ -22,6 +22,8 @@
+ 
+ #include "svgint.h"
+ 
++#include <stdlib.h>
++
+ static svg_status_t
+ _svg_group_grow_element_by (svg_group_t *group, int additional);
+ 
+diff -ur libsvg-0.1.4.org/src/svg_image.c libsvg-0.1.4/src/svg_image.c
+--- libsvg-0.1.4.org/src/svg_image.c	2025-07-15 16:13:22.121847914 +0200
++++ libsvg-0.1.4/src/svg_image.c	2025-07-15 16:16:51.890856758 +0200
+@@ -21,6 +21,7 @@
+ */
+ 
+ #include <string.h>
++#include <stdlib.h>
+ #include <png.h>
+ #include <jpeglib.h>
+ #include <jerror.h>
+diff -ur libsvg-0.1.4.org/src/svg_paint.c libsvg-0.1.4/src/svg_paint.c
+--- libsvg-0.1.4.org/src/svg_paint.c	2005-04-11 17:43:59.000000000 +0200
++++ libsvg-0.1.4/src/svg_paint.c	2025-07-15 16:17:06.601281319 +0200
+@@ -21,6 +21,7 @@
+ */
+ 
+ #include <string.h>
++#include <stdlib.h>
+ 
+ #include "svgint.h"
+ 
+diff -ur libsvg-0.1.4.org/src/svg_parser.c libsvg-0.1.4/src/svg_parser.c
+--- libsvg-0.1.4.org/src/svg_parser.c	2005-04-21 20:52:30.000000000 +0200
++++ libsvg-0.1.4/src/svg_parser.c	2025-07-15 16:17:24.140769693 +0200
+@@ -25,6 +25,7 @@
+ #include <stdarg.h>
+ #include <math.h>
+ #include <string.h>
++#include <stdlib.h>
+ 
+ #include "svgint.h"
+ 
+diff -ur libsvg-0.1.4.org/src/svg_parser_libxml.c libsvg-0.1.4/src/svg_parser_libxml.c
+--- libsvg-0.1.4.org/src/svg_parser_libxml.c	2005-04-11 18:05:58.000000000 +0200
++++ libsvg-0.1.4/src/svg_parser_libxml.c	2025-07-15 16:18:36.450349989 +0200
+@@ -25,6 +25,7 @@
+ #include <stdarg.h>
+ #include <math.h>
+ #include <string.h>
++#include <stdlib.h>
+ 
+ #include "svgint.h"
+ 
+diff -ur libsvg-0.1.4.org/src/svg_str.c libsvg-0.1.4/src/svg_str.c
+--- libsvg-0.1.4.org/src/svg_str.c	2005-01-21 13:53:07.000000000 +0100
++++ libsvg-0.1.4/src/svg_str.c	2025-07-15 16:17:46.066159999 +0200
+@@ -22,6 +22,8 @@
+ 
+ #include "svgint.h"
+ 
++#include <stdlib.h>
++
+ void
+ _svg_str_skip_space (const char **str)
+ {
+diff -ur libsvg-0.1.4.org/src/svg_style.c libsvg-0.1.4/src/svg_style.c
+--- libsvg-0.1.4.org/src/svg_style.c	2005-06-15 21:36:18.000000000 +0200
++++ libsvg-0.1.4/src/svg_style.c	2025-07-15 16:18:07.320489948 +0200
+@@ -22,6 +22,7 @@
+ 
+ #include <math.h>
+ #include <string.h>
++#include <stdlib.h>
+ 
+ #include "svgint.h"
+ 
+diff -ur libsvg-0.1.4.org/src/svg_text.c libsvg-0.1.4/src/svg_text.c
+--- libsvg-0.1.4.org/src/svg_text.c	2005-04-21 21:26:06.000000000 +0200
++++ libsvg-0.1.4/src/svg_text.c	2025-07-15 16:18:21.555505921 +0200
+@@ -21,6 +21,7 @@
+ */
+ 
+ #include <string.h>
++#include <stdlib.h>
+ 
+ #include "svgint.h"
+ 
+--- libsvg-0.1.4/src/svg_gradient.c~	2005-04-11 17:45:06.000000000 +0200
++++ libsvg-0.1.4/src/svg_gradient.c	2025-07-15 16:22:57.394474497 +0200
+@@ -23,6 +23,7 @@
+ #include "svgint.h"
+ 
+ #include <string.h>
++#include <stdlib.h>
+ 
+ svg_status_t
+ _svg_gradient_init (svg_gradient_t *gradient)
