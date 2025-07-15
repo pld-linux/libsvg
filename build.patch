@@ -141,3 +141,13 @@ diff -ur libsvg-0.1.4.org/src/svg_text.c libsvg-0.1.4/src/svg_text.c
  
  svg_status_t
  _svg_gradient_init (svg_gradient_t *gradient)
+--- libsvg-0.1.4/src/svgint.h~	2005-06-03 18:17:59.000000000 +0200
++++ libsvg-0.1.4/src/svgint.h	2025-07-15 16:41:38.030515660 +0200
+@@ -36,6 +36,7 @@
+ #include <libxml/SAX.h>
+ #include <libxml/xmlmemory.h>
+ #include <libxml/hash.h>
++#include <libxml/parser.h>
+ 
+ typedef xmlParserCtxtPtr svg_xml_parser_context_t;
+ typedef xmlHashTable svg_xml_hash_table_t;
